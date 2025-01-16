@@ -19,16 +19,27 @@ call plug#end()
 			
 let mapleader = "\\"
 
+"Keybinds for switching tabs
+
+nnoremap <leader>1 :tabfirst<CR>
+nnoremap <leader>2 :tabn 2<CR>
+nnoremap <leader>3 :tabn 3<CR>
+nnoremap <leader>4 :tabn 4<CR>
+nnoremap <leader>5 :tabn 5<CR>
+nnoremap <leader>6 :tabn 6<CR>
+nnoremap <leader>7 :tabn 7<CR>
+nnoremap <leader>8 :tabn 8<CR>
+nnoremap <leader>9 :tabn 9<CR>
+nnoremap <leader>0 :tablast <CR>
+nnoremap <leader>+ :tabnext<CR>
+nnoremap <leader>- :tabprevious<CR>
+
 "Normal Mode
 
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>y :y <CR>
-nnoremap <leader><A> :tabnext<CR>
-nnoremap <leader>f :tabfirst<CR>
-nnoremap <leader>d :tablast<CR>
-nnoremap <leader><number> :tabn <number><CR>
 nnoremap <leader>s :vsplit ~/.config/nvim/init.vim <CR>
 nnoremap <leader>n :vsplit new <CR>
 nnoremap <leader>o :only <CR>
@@ -42,6 +53,10 @@ vnoremap <leader>c2 "yy<CR>
 vnoremap <leader>c "y$<CR>
 vnoremap <leader><Ctrl + C> "+yy<CR>
 vnoremap <leader><Del> :del<CR> "y<CR>
+
+"Functions
+
+let g:compiled_called = 0
 
 "Colorscheme
 
