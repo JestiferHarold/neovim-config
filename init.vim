@@ -6,6 +6,7 @@ filetype plugin on
 filetype plugin indent on
 syntax on
 set relativenumber
+
 "Plugins
 
 call plug#begin()
@@ -13,11 +14,24 @@ call plug#begin()
 	Plug 'sainnhe/gruvbox-material'	
 	Plug 'rust-lang/rust.vim'
 	Plug 'projekt0n/github-nvim-theme'
+	Plug 'JestiferHarold/neovim_java_syntax_highlighting'
+	Plug 'https://github.com/JestiferHarold/neovim_java_syntax_highlighting'
 call plug#end()
 
 "Keybinds
 			
 let mapleader = "\\"
+
+"Removing the default keybinds for movement
+
+map h <Nop>
+map j <Nop>
+map k <Nop>
+map l <Nop>
+map w <Nop>
+map s <Nop>
+map d <Nop>
+map a <Nop>
 
 "Keybinds for switching tabs
 
@@ -48,6 +62,12 @@ nnoremap <leader>n :vsplit<CR> :Explore<CR>
 nnoremap <leader>o :only <CR>
 nnoremap <leader>e :Explore<CR>
 nnoremap <silent> <leader>j :Lexplore <CR>
+nnoremap w <Up>
+nnoremap s <Down>
+nnoremap a <Left>
+nnoremap d <Right>
+nnoremap f :1 <CR>
+nnoremap l :% <CR>
 
 "Visual Mode
 
