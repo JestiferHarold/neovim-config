@@ -22,17 +22,20 @@ let mapleader = "\\"
 "Keybinds for switching tabs
 
 nnoremap <leader>1 :tabfirst<CR>
-nnoremap <leader>2 :tabn 2<CR>
-nnoremap <leader>3 :tabn 3<CR>
-nnoremap <leader>4 :tabn 4<CR>
-nnoremap <leader>5 :tabn 5<CR>
-nnoremap <leader>6 :tabn 6<CR>
-nnoremap <leader>7 :tabn 7<CR>
-nnoremap <leader>8 :tabn 8<CR>
-nnoremap <leader>9 :tabn 9<CR>
+nnoremap <leader>2 :tabn 2 <CR>
+nnoremap <leader>3 :tabn 3 <CR>
+nnoremap <leader>4 :tabn 4 <CR>
+nnoremap <leader>5 :tabn 5 <CR>
+nnoremap <leader>6 :tabn 6 <CR>
+nnoremap <leader>7 :tabn 7 <CR>
+nnoremap <leader>8 :tabn 8 <CR>
+nnoremap <leader>9 :tabn 9 <CR>
 nnoremap <leader>0 :tablast <CR>
-nnoremap <leader>+ :tabnext<CR>
-nnoremap <leader>- :tabprevious<CR>
+nnoremap <leader>+ :tabnext <CR>
+nnoremap <leader>- :tabprevious <CR>
+nnoremap <leader>L :-tabmove<CR>
+nnoremap <leader>R :+tabmove<CR>
+nnoremap <leader><Tab> :<C-w> <CR>
 
 "Normal Mode
 
@@ -41,7 +44,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>y :y <CR>
 nnoremap <leader>s :vsplit ~/.config/nvim/init.vim <CR>
-nnoremap <leader>n :vsplit new <CR>
+nnoremap <leader>n :vsplit<CR> :Explore<CR>
 nnoremap <leader>o :only <CR>
 nnoremap <leader>e :Explore<CR>
 nnoremap <silent> <leader>j :Lexplore <CR>
