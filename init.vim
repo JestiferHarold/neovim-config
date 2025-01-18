@@ -32,6 +32,8 @@ map w <Nop>
 map s <Nop>
 map d <Nop>
 map a <Nop>
+map e <Nop>
+map u <Nop>
 
 "Keybinds for switching tabs
 
@@ -68,14 +70,24 @@ nnoremap a <Left>
 nnoremap d <Right>
 nnoremap f :1 <CR>
 nnoremap l :% <CR>
+nnoremap g :.d <CR>
+nnoremap <C-u> :undo <CR>
+nnoremap <C-r> :redo <CR>
+nnoremap <leader><Tab> :vsplit term://bash <CR>
 
 "Visual Mode
 
 vnoremap <leader>c1 "yw<CR>
 vnoremap <leader>c2 "yy<CR>
 vnoremap <leader>c "y$<CR>
-vnoremap <leader><Ctrl + C> "+yy<CR>
+vnoremap <leader>m "+y<CR>
 vnoremap <leader><Del> :del<CR> "y<CR>
+
+"Teminal binds
+
+tnoremap <leader>q <C-\><C-N> 
+tnoremap <leader>n <C-\><C-N> :q <CR>
+
 
 "Functions
 
