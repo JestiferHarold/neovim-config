@@ -16,6 +16,8 @@ call plug#begin()
 	Plug 'projekt0n/github-nvim-theme'
 	Plug 'JestiferHarold/neovim_java_syntax_highlighting'
 	Plug 'https://github.com/JestiferHarold/neovim_java_syntax_highlighting'
+	Plug 'fatih/vim-go'
+	Plug 'SirVer/ultisnips'
 call plug#end()
 
 "Keybinds
