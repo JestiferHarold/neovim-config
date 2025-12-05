@@ -1,7 +1,10 @@
 vim.cmd("set number")
+echo "Length of the string is ${#num}"
 vim.cmd("set relativenumber")
 vim.cmd("set cursorline")
 vim.cmd("set ignorecase")
+vim.cmd("syntax on")
+vim.cmd("filetype plugin indent on")
 vim.g.mapleader = " "
 
 local secondmapleader = ""
@@ -102,6 +105,69 @@ vim.keymap.set(
 	}
 )
 
+vim.keymap.set(
+	'n',
+	'<Leader>=',
+	':tabnext<CR>'
+)
+
+vim.keymap.set(
+	'n',
+	'<Leader>-',
+	':tabprevious<CR>'
+)
+
+vim.keymap.set(
+	'n',
+	'cu',
+	':undo <CR>'
+)
+
+vim.keymap.set(
+	'n',
+	'cr',
+	':redo <CR>'
+)
+		
+vim.keymap.set(
+	'n',
+	'cpf',
+	':%y+<CR>',
+	{
+		desc = "to copy the entire file to the clipboard"
+	}
+)
+
+vim.keymap.set(
+	'n',
+	'cpl',
+	':y+',
+	{
+		desc = "to copy a line to the clipboard"
+	}
+)
+
+vim.keymap.set(
+	'n',
+	'<Leader>v',
+	':vnew<CR>',
+	{
+		desc = "open a new vertical tab"
+	}
+)
+
+vim.keymap.set(
+	'n',
+	'<Leader>j',
+	':gt<CR>'
+)
+
+vim.keymap.set(
+	'n',
+	'<Leader>k',
+	':gT<CR>'
+)
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -116,7 +182,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-	{ "EdenEast/nightfox.nvim" }
+	{ "EdenEast/nightfox.nvim" },
+	{ "rebelot/kanagawa.nvim" },
+	{ "folke/tokyonight.nvim" },
+	{ "datsfilipe/vesper.nvim" },
+	{ "mellow-theme/mellow.nvim" },
+	{ "Tsuzat/NeoSolarized.nvim" },
+	{ "neovimhaskell/haskell-vim" }
 }
 
 local opts = {}
@@ -126,4 +198,5 @@ require("lazy").setup(
 		spec = plugins
 	}
 ) 
-vim.cmd("colorscheme carbonfox")
+
+vim.cmd.colorscheme("tokyonight-night")
